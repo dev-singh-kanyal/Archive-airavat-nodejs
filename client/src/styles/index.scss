@@ -1,0 +1,32 @@
+:root {
+    --nav-height: 64px;
+    --footer-height: 240px;
+}
+
+::-webkit-scrollbar {
+    background: #e7e7e7d9;
+    height: 8px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 2px;
+}
+
+
+.main-component-wrapper {
+    padding: 1px 0;
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height) - 2px);
+}
+
+.home-component {
+    .hero {
+        position: relative;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+        background-size: cover;
+        background-position: top center;
+        overflow: hidden;
+        height: calc(100vh - var(--nav-height));
+    }
+}

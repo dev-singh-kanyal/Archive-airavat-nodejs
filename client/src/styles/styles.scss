@@ -1,0 +1,13 @@
+.lists
+{
+    list-style: none;
+    margin: 0.5rem 0;
+    padding: 0;
+}
+
+.organization {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
