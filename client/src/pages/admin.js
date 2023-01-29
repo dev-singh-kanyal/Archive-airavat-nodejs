@@ -53,7 +53,7 @@ const Admin = () => {
       })
   }
 
-  const center = { lat: 26.182808644471546, lng: 91.80385223005672 }
+  const center = { lat: 24.832085897502783, lng: 93.91264484290599 }
 
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: config.GOOGLE_MAPS_API_KEY,

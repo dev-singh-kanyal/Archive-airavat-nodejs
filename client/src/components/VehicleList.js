@@ -14,12 +14,13 @@ const VehicleInfo = ({ vehicle, close, setVehiclePath }) => {
     let gmapPath = [];
     let totalDistance = 0;
 
-    for (let i = 0, size = path.length; i < size - 1; i++) {
+    for (let i = 0, size = path.length; i < size - 1; i = i+10) {
       // eslint-disable-next-line no-undef
       const directionsService = new google.maps.DirectionsService()
       const results = await directionsService.route({
         origin: path[i].coords,
-        destination: path[i + 1].coords,
+        destination: i+10 < size ? path[i + 10].coords : path[size-1],
+        waypoints: path.slice(i+1, i+9),
         // eslint-disable-next-line no-undef
         travelMode: google.maps.TravelMode.DRIVING,
       })
